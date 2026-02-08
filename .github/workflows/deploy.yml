@@ -1,0 +1,52 @@
+name: X-Monitor 自动抓取与部署
+
+on:
+  schedule:
+    # 每3小时运行一次
+    - cron: '0 */3 * * *'
+  workflow_dispatch:  # 手动触发
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  fetch-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        
+    - name: Install bird
+      run: |
+        npm install -g @steipete/bird
+        
+    - name: Fetch X data
+      env:
+        AUTH_TOKEN: ${{ secrets.X_AUTH_TOKEN }}
+        CT0: ${{ secrets.X_CT0 }}
+      run: |
+        python x_monitor.py
+        
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+      
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: './docs'
+        
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
