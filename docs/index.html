@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Monitor | AI热点监控</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif;
+            background: #0f0f23;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid #2a2a4a;
+        }
+        .header h1 {
+            font-size: 1.8rem;
+            background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .header .meta {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .category {
+            margin-bottom: 2rem;
+            background: #1a1a2e;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #2a2a4a;
+        }
+        .category-header {
+            background: linear-gradient(90deg, #2a2a4a 0%, #1a1a2e 100%);
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-bottom: 1px solid #2a2a4a;
+        }
+        .tweet {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #2a2a4a;
+            transition: background 0.2s;
+        }
+        .tweet:hover {
+            background: #252542;
+        }
+        .tweet:last-child {
+            border-bottom: none;
+        }
+        .tweet-user {
+            color: #00d4ff;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+        }
+        .tweet-content {
+            color: #e0e0e0;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        .tweet-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #888;
+        }
+        .tweet-link {
+            color: #7b2cbf;
+            text-decoration: none;
+        }
+        .tweet-link:hover {
+            text-decoration: underline;
+        }
+        .empty {
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+        }
+        .nav {
+            position: sticky;
+            top: 0;
+            background: rgba(15, 15, 35, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            border-bottom: 1px solid #2a2a4a;
+            z-index: 100;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .nav-link {
+            color: #888;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #00d4ff;
+            background: #2a2a4a;
+        }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.4rem; }
+            .container { padding: 0.5rem; }
+            .tweet { padding: 0.8rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🤖 X-Monitor</h1>
+        <div class="meta">AI科技热点监控 | 2026-02-09 14:25 更新</div>
+    </header>
+    
+    <nav class="nav">
+        <div class="nav-links">
+            <a href="#global_ai" class="nav-link">🌐 全球AI</a>
+            <a href="#cn_ai" class="nav-link">🇨🇳 中文AI</a>
+            <a href="#cn_viral" class="nav-link">🔥 万赞</a>
+            <a href="#jp_trending" class="nav-link">🇯🇵 日区</a>
+            <a href="#tech_insights" class="nav-link">📊 干货</a>
+            <a href="#visual" class="nav-link">🖼️ 带图</a>
+        </div>
+    </nav>
+    
+    <main class="container">
+<section class="category" id="global_ai">
+<div class="category-header">🌐 全球AI科技</div>
+<div class="tweet">
+<div class="tweet-user">@tyleroakley (tyler oakley):</div>
+<div class="tweet-content">all the super bowl ads being for ai, surveillance technologies, glp-1, scientology, gambling… the golden era of super bowl ads is kinda over </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 03:42:26 +0000 2026</span>
+<a href="https://x.com/tyleroakley/status/2020704819212939513" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@Jani__Gee (Jani Gem 🌶):</div>
+<div class="tweet-content">Superbowl ads this year: - AI begging -  Gambling apps - Crypto - MA*A and z*on*st propaganda - Ring camera begging - pharmaceuticals - junk food </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 03:24:57 +0000 2026</span>
+<a href="https://x.com/Jani__Gee/status/2020700421610955097" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@AndrewSolender (Andrew Solender):</div>
+<div class="tweet-content">my takeaway from the super bowl ads is that the entire american economy is being propped up by AI, weight loss drugs, cryptocurrency and gambling </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 02:55:09 +0000 2026</span>
+<a href="https://x.com/AndrewSolender/status/2020692920912040341" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@keyon (HOOD VOGUE is tired of poverty):</div>
+<div class="tweet-content">Trying to get through all these ai Super Bowl ads https://t.co/ngS47VwHnI </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 02:50:38 +0000 2026</span>
+<a href="https://x.com/keyon/status/2020691784263954506" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@82erssy (brig 🐦‍🔥):</div>
+<div class="tweet-content">ring offering to turn your neighborhood into an AI fueled surveillance state under the guise of “helping you find your lost dog” is CRAZY </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 02:09:00 +0000 2026</span>
+<a href="https://x.com/82erssy/status/2020681306116362606" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@electionsjoe (Joe):</div>
+<div class="tweet-content">It’s 2026. Everything is ai, ozempic, or gambling. We’re all dead. </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 02:00:29 +0000 2026</span>
+<a href="https://x.com/electionsjoe/status/2020679161149591838" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@JoestarJokic (subscribe to the state of the league patreon):</div>
+<div class="tweet-content">4 field goals broken up by AI commercials https://t.co/yOPkXuc5r4 </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 01:54:42 +0000 2026</span>
+<a href="https://x.com/JoestarJokic/status/2020677708926140577" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@problemsthots (kimberly.):</div>
+<div class="tweet-content">AI slop ad, gambling ad, crypto ad, ozempic ad. super bowl commercials used to be the best part of the night… https://t.co/eTJU94Av1c </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 01:49:43 +0000 2026</span>
+<a href="https://x.com/problemsthots/status/2020676452916801717" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@_HNNDRX (🎸):</div>
+<div class="tweet-content">Super Bowl commercials filled with nothing but AI and antisemitism awareness https://t.co/568Qt10PE5 </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 01:42:11 +0000 2026</span>
+<a href="https://x.com/_HNNDRX/status/2020674559075045709" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@BenjaminCrew1 (Ben Crew):</div>
+<div class="tweet-content">Every single commercial break has an ad for AI https://t.co/URWmYQ6p7s </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 01:36:56 +0000 2026</span>
+<a href="https://x.com/BenjaminCrew1/status/2020673234589323482" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+</section>
+<section class="category" id="cn_ai">
+<div class="category-header">🇨🇳 中文AI圈</div>
+<div class="tweet">
+<div class="tweet-user">@wangzhian8848 (王局志安):</div>
+<div class="tweet-content">字节推出的那个seedance2，我感觉是全球范围内视频制作最厉害的AI了。以后动画制作的成本要雪崩，电影也快了。 </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 00:07:51 +0000 2026</span>
+<a href="https://x.com/wangzhian8848/status/2020650819218268451" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+</section>
+<section class="category" id="cn_viral">
+<div class="category-header">🔥 中文万赞神贴</div>
+<div class="tweet">
+<div class="tweet-user">@bb_taiwan (bb):</div>
+<div class="tweet-content">「不敢挑戰的國家沒有未來。未來要靠自己親手創造！」 - 高市早苗 恭喜日本，在民主路上持續穩健前行🇯🇵 「有一天，公義、自由、民主的鐘聲，和平、安詳、喜悅的詩歌，必將從北部的台北到南部的屏東、從西部的澎湖到東部的台東，傳遍整個美麗的台灣大地。」 - 林義雄 台灣人，我們一起走到那一天。 https://t.co/sOsUFO50KT </div>
+<div class="tweet-meta">
+<span>Sun Feb 08 14:52:29 +0000 2026</span>
+<a href="https://x.com/bb_taiwan/status/2020511054627737703" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@anzai_teachco (あんぢい):</div>
+<div class="tweet-content">弱肉強食 https://t.co/Vl2a0UBAzf </div>
+<div class="tweet-meta">
+<span>Sun Feb 08 09:44:35 +0000 2026</span>
+<a href="https://x.com/anzai_teachco/status/2020433567634076148" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@kiita130 (駒木根葵汰):</div>
+<div class="tweet-content">全力全開⚙️ >  QT @sentai_official: > 戦い続けた色とりどりの戦士たちと > ずっと一緒に走り続けてくれたみんな > > ひとりひとりすべてのカラー【個性】に > PHOTO: https://pbs.twimg.com/media/HAkCKJca4AA9O_q.jpg >  https://x.com/sentai_official/status/2020301559171608709 </div>
+<div class="tweet-meta">
+<span>Sun Feb 08 06:43:59 +0000 2026</span>
+<a href="https://x.com/kiita130/status/2020388118210437319" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@Caley25364498 (燃烧原野):</div>
+<div class="tweet-content">哪里不舒服吗🧐 https://t.co/6383uWbzxw </div>
+<div class="tweet-meta">
+<span>Sun Feb 08 06:39:37 +0000 2026</span>
+<a href="https://x.com/Caley25364498/status/2020387022922478043" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+</section>
+<section class="category" id="jp_trending">
+<div class="category-header">🇯🇵 日区热门</div>
+<div class="tweet">
+<div class="tweet-user">@Kanae_2434 (叶＠にじさんじ):</div>
+<div class="tweet-content">打ち明けます。 gta参加します...! けどガチャを引きたいので先にグラブルです。 </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 06:18:24 +0000 2026</span>
+<a href="https://x.com/Kanae_2434/status/2020744067920113868" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@Kanae_2434 (叶＠にじさんじ):</div>
+<div class="tweet-content">覚悟はできてる </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 06:17:21 +0000 2026</span>
+<a href="https://x.com/Kanae_2434/status/2020743806078046616" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@BBKUNX97 (ผิง):</div>
+<div class="tweet-content">噂の胎児ラーメン https://t.co/iawF2mWuKa </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 06:14:26 +0000 2026</span>
+<a href="https://x.com/BBKUNX97/status/2020743069847699965" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@SherrieMar2918 (琴音♨️＠お金ください(ˊo̴̶̷̤ ᴗ o̴̶̷̤ˋ)):</div>
+<div class="tweet-content">バレたらまずい癖 https://t.co/m9UwelmpBb </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 06:07:39 +0000 2026</span>
+<a href="https://x.com/SherrieMar2918/status/2020741364267520143" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@Ex_Albio (エクス・アルビオ🛡エビオ):</div>
+<div class="tweet-content">あと3時間でGTAだけどまだ寝れてないw </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 06:02:24 +0000 2026</span>
+<a href="https://x.com/Ex_Albio/status/2020740044370399286" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@momosuzunene (桃鈴ねね🍑🥟Nenechi):</div>
+<div class="tweet-content">ダンスレッスン行ってくるジェえええええええええええ </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 06:02:11 +0000 2026</span>
+<a href="https://x.com/momosuzunene/status/2020739987453714814" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@milk_info (M!LK OFFICIAL):</div>
+<div class="tweet-content">／ 📣Apple Musicランクイン🎖️ ＼ Apple Musicのトップソングに 👍イイじゃん ❣️好きすぎて滅！ そして本日配信スタートした 💥爆裂愛してる の3曲同時ランクイン！！！！！ たくさんお聴きいただきありがとうございます！ ▼Apple Musicアーティストページはこちら https://t.co/WWMFDDCLsp </div>
+<div class="tweet-meta">
+<span></span>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@AppleMusicJapan</div>
+<div class="tweet-content">#MILK #爆裂愛してる #好きすぎて滅 #イイじゃん </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 06:01:52 +0000 2026</span>
+<a href="https://x.com/milk_info/status/2020739908147843269" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+</section>
+<section class="category" id="tech_insights">
+<div class="category-header">📊 技术干货</div>
+<div class="tweet">
+<div class="tweet-user">@PopCrave (Pop Crave):</div>
+<div class="tweet-content">Adam Sandler praised Bad Bunny after his historic Super Bowl performance. https://t.co/BkjxbuoPqr </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 05:38:35 +0000 2026</span>
+<a href="https://x.com/PopCrave/status/2020734051393630684" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@MySportsUpdate (Ari Meirov):</div>
+<div class="tweet-content">#Seahawks LB Ernest Jones responds to Puka Nacua 😳 https://t.co/zKROKpx2rs </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 05:12:03 +0000 2026</span>
+<a href="https://x.com/MySportsUpdate/status/2020727373595885829" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@PopBase (Pop Base):</div>
+<div class="tweet-content">Josh Hutcherson singing along to Bad Bunny’s #SuperBowl halftime show. https://t.co/rEzXbp6AYL </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 05:03:17 +0000 2026</span>
+<a href="https://x.com/PopBase/status/2020725165362139335" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@NFL (NFL):</div>
+<div class="tweet-content">JSN is No. 1 ☝️ https://t.co/2CmP0Z6Yba </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 04:53:41 +0000 2026</span>
+<a href="https://x.com/NFL/status/2020722752026706357" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@AndrewKolvet (Andrew Kolvet):</div>
+<div class="tweet-content">The All-American Halftime Show pulled in OVER 25 MILLION views on just YouTube and Rumble alone, with a lot of large groups watching together, so the number of viewers is likely far higher. And the numbers are still climbing (broadcast partners, fast channel partners, and final counts incoming). Bas...</div>
+<div class="tweet-meta">
+<span>Mon Feb 09 04:50:04 +0000 2026</span>
+<a href="https://x.com/AndrewKolvet/status/2020721839631225101" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@MySportsUpdate (Ari Meirov):</div>
+<div class="tweet-content">Kenneth Walker's dad has never been to an NFL game to watch his son because he doesn't like crowds. He went to the Super Bowl for his first game ... and he watched his son win Super Bowl MVP. That's pretty cool. https://t.co/GRni6cb8hb </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 04:49:40 +0000 2026</span>
+<a href="https://x.com/MySportsUpdate/status/2020721738888146981" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@_dilemmer (king geedorah):</div>
+<div class="tweet-content">Who me? https://t.co/3VJ7oUVWN6 >  QT @PYTSUPREMACIST: > Haitian flag at the Super Bowl https://t.co/CshPpj2wJZ > VIDEO: https://pbs.twimg.com/amplify_video_thumb/2018157310422470656/img/H0TuREtG5vXBjni9.jpg >  https://x.com/PYTSUPREMACIST/status/2020673430190764419 </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 04:45:47 +0000 2026</span>
+<a href="https://x.com/_dilemmer/status/2020720759954657442" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@ernestjones (Ernest Jones):</div>
+<div class="tweet-content">Ain’t you at home. Goofy ass >  QT @AsapPuka: > 😂 sam darnold >  https://x.com/AsapPuka/status/2020695742466465905 </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 04:43:04 +0000 2026</span>
+<a href="https://x.com/ernestjones/status/2020720076333404177" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+</section>
+<section class="category" id="visual">
+<div class="category-header">🖼️ 带图热门</div>
+<div class="tweet">
+<div class="tweet-user">@sonson_srixon (そんそんすりくそん):</div>
+<div class="tweet-content">鳴潮 漂泊者 SFW. https://t.co/dIRW3Fskw2 </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 03:00:01 +0000 2026</span>
+<a href="https://x.com/sonson_srixon/status/2020694144864403700" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@37TDNMDbpbO8HI8 (大橋底下臨時工):</div>
+<div class="tweet-content">今天看美國國務院打巴掌。熱呼呼的哩~ 小草：AIT 只是民間組織。 蕭旭岑：谷立言只比科長大一點。 https://t.co/9A41XwLDoR </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 02:12:18 +0000 2026</span>
+<a href="https://x.com/37TDNMDbpbO8HI8/status/2020682135603228868" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@REre_0268 (レー):</div>
+<div class="tweet-content">#Soundwave 给朋友的🥺🤲 https://t.co/1TdL09QhMH </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 01:52:27 +0000 2026</span>
+<a href="https://x.com/REre_0268/status/2020677139327234367" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+<div class="tweet">
+<div class="tweet-user">@jue_no_mess (珏兒｜Jue 🔜以茶會毛&BeastAges):</div>
+<div class="tweet-content">FF46再次感謝大家 ✨️ 回家已先大睡了一波 這幾天遇見好多美好的人事物 會將這些回憶好好收藏起來的♡ 天氣突然變得好冷你各位要保重身體(๑•̀ㅁ•́ฅ) 接下來是月底的以茶會毛＆獸紀元 期待再次與小夥伴們相見🐾 網路通販預計會在三月中開啟呦 #FF46 #寶可夢 https://t.co/j46A8U2Abe </div>
+<div class="tweet-meta">
+<span>Mon Feb 09 01:45:27 +0000 2026</span>
+<a href="https://x.com/jue_no_mess/status/2020675380949270724" target="_blank" class="tweet-link">查看原文 →</a>
+</div>
+</div>
+</section>
+
+    </main>
+    
+    <footer style="text-align: center; padding: 2rem; color: #666; font-size: 0.85rem;">
+        <p>X-Monitor MVP | 自动抓取 · 每小时更新</p>
+        <p style="margin-top: 0.5rem;">🤖 by NAVI</p>
+    </footer>
+</body>
+</html>
